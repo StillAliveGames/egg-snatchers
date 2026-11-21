@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#7fd0ff" />
+    <link rel="icon" href="data:," />
+    <title>Egg Snatchers</title>
+    <script type="module" crossorigin src="./assets/index-DWB8jIwI.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-OQ89zL1j.css">
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="game-canvas" aria-label="Game"></canvas>
+      <div id="labels" aria-hidden="true"></div>
+      <div id="floaters" aria-hidden="true"></div>
+      <div id="danger" aria-hidden="true"></div>
+
+      <section id="hud">
+        <div class="stat money">
+          <i class="si" id="i-money"></i>
+          <div><span id="l-money"></span><strong id="money">0</strong><em id="income"></em></div>
+        </div>
+        <div class="stat">
+          <i class="si" id="i-speed"></i>
+          <div><span id="l-speed"></span><strong id="speed">0</strong><em id="speed-goal"></em></div>
+        </div>
+        <div class="stat">
+          <i class="si" id="i-pen"></i>
+          <div><span id="l-pen"></span><strong id="pen">0/7</strong></div>
+        </div>
+        <div class="stat" id="rebirth-stat" hidden>
+          <i class="si pink" id="i-rebirths"></i>
+          <div><span id="l-rebirths"></span><strong id="rebirths">0</strong></div>
+        </div>
+      </section>
+      <div id="boost-chips"></div>
+
+      <nav id="side">
+        <button id="btn-boosts" type="button" class="side-btn" data-key="B"></button>
+        <button id="btn-pets" type="button" class="side-btn orange" data-key="P"></button>
+        <button id="btn-sound" type="button" class="side-btn small" data-key="M"></button>
+      </nav>
+
+      <div id="hint" aria-live="polite"></div>
+      <div id="guardian-arrow" hidden>▲</div>
+      <div id="toast" aria-live="polite"></div>
+      <div id="reveal" aria-live="polite"></div>
+      <div id="area" aria-live="polite"></div>
+
+      <section id="actions">
+        <button id="btn-rebirth" type="button" data-key="R" hidden><span class="ic"></span><span class="tx"><b></b><i></i></span></button>
+        <button id="btn-pen" type="button" data-key="1"><span class="ic"></span><span class="tx"><b></b><i></i></span></button>
+        <button id="btn-treadmill" type="button" data-key="2"><span class="ic"></span><span class="tx"><b></b><i></i></span></button>
+      </section>
+
+      <div id="boost-panel" class="modal" hidden>
+        <div class="panel">
+          <header><h2 id="boost-title"></h2><button id="boost-close" type="button" class="close"></button></header>
+          <div id="boost-list"></div>
+          <p id="adblock-note" hidden></p>
+        </div>
+      </div>
+
+      <div id="pets-panel" class="modal" hidden>
+        <div class="panel wide">
+          <header><h2 id="pets-title"></h2><span id="pets-count"></span><button id="pets-close" type="button" class="close"></button></header>
+          <div id="pets-album"></div>
+          <button id="pets-best" type="button" class="best"></button>
+          <div id="pets-list"></div>
+        </div>
+      </div>
+
+      <div id="welcome" class="modal" hidden>
+        <div class="panel welcome">
+          <h2 id="welcome-title"></h2>
+          <p id="welcome-text"></p>
+          <div class="welcome-sum" id="welcome-sum"></div>
+          <div class="welcome-buttons">
+            <button id="welcome-ad" type="button" class="btn-ad"></button>
+            <button id="welcome-take" type="button" class="btn-coins"></button>
+          </div>
+        </div>
+      </div>
+
+      <div id="touch-controls" aria-hidden="true">
+        <div id="touch-stick"><div id="touch-knob"></div></div>
+        <button id="dash-button" type="button" hidden></button>
+      </div>
+
+      <div id="cover-title">Egg Snatchers</div>
+      <div id="loading"><div class="egg-spin"></div><b>Egg Snatchers</b></div>
+    </main>
+  </body>
+</html>
